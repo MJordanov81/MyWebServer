@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Exceptions
+﻿namespace MyWebServer.Server.Exceptions
 {
     using System;
 

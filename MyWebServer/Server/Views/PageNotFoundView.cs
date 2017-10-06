@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Views
+﻿namespace MyWebServer.Server.Views
 {
     using Contracts;
 

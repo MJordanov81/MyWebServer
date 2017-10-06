@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Utils
+﻿namespace MyWebServer.Server.Utils
 {
     using System;
 

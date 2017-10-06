@@ -1,12 +1,11 @@
-﻿namespace ByTheCakeApplication
+﻿namespace App
 {
     using Config;
     using Config.Contracts;
     using Context;
-    using WebServerApplication.Server;
-    using WebServerApplication.Server.Routing;
-    using WebServerApplication.Server.Routing.Contracts;
-
+    using MyWebServer.Server;
+    using MyWebServer.Server.Routing;
+    using MyWebServer.Server.Routing.Contracts;
 
     public class Launcher
     {

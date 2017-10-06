@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server
+﻿namespace MyWebServer.Server
 {
     using System;
     using System.Net;

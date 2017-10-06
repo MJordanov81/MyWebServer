@@ -1,9 +1,9 @@
-﻿namespace ByTheCakeApplication.Views.Home
+﻿namespace App.Views.Home
 {
-    using HtmlUtilities.DataModels;
-    using HtmlUtilities.HtmlHelpers;
     using System;
-    using WebServerApplication.Server.Contracts;
+    using HtmlUtility.DataModels;
+    using HtmlUtility.HtmlHelpers;
+    using MyWebServer.Server.Contracts;
 
     public class SearchView : IView
     {

@@ -1,7 +1,7 @@
-﻿namespace ByTheCakeApplication.Views.Home
+﻿namespace App.Views.Home
 {
+    using MyWebServer.Server.Contracts;
     using Resources.images;
-    using WebServerApplication.Server.Contracts;
 
     public class IndexView : IView
     {

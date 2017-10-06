@@ -1,4 +1,4 @@
-﻿namespace ByTheCakeApplication.Resources.images
+﻿namespace App.Resources.images
 {
     public class Images
     {

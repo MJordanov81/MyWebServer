@@ -1,16 +1,16 @@
-﻿namespace ByTheCakeApplication.Controllers
+﻿namespace App.Controllers
 {
-    using Context;
-    using HtmlUtilities.DataModels;
-    using Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Context;
+    using HtmlUtility.DataModels;
+    using Models;
+    using MyWebServer.Server.Enums;
+    using MyWebServer.Server.HTTP.Contracts;
+    using MyWebServer.Server.HTTP.Response;
+    using MyWebServer.Server.Utils;
     using Views.Home;
-    using WebServerApplication.Server.Enums;
-    using WebServerApplication.Server.HTTP.Contracts;
-    using WebServerApplication.Server.HTTP.Response;
-    using WebServerApplication.Server.Utils;
 
     public class HomeController
     {

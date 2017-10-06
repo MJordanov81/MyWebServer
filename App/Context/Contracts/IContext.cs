@@ -1,4 +1,4 @@
-﻿namespace ByTheCakeApplication.Context.Contracts
+﻿namespace App.Context.Contracts
 {
     using System.Collections.Generic;
     using Models;

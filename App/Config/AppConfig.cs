@@ -1,10 +1,10 @@
-﻿namespace ByTheCakeApplication.Config
+﻿namespace App.Config
 {
     using Contracts;
     using Controllers;
-    using WebServerApplication.Server.Enums;
-    using WebServerApplication.Server.Handlers;
-    using WebServerApplication.Server.Routing.Contracts;
+    using MyWebServer.Server.Enums;
+    using MyWebServer.Server.Handlers;
+    using MyWebServer.Server.Routing.Contracts;
 
     public class AppConfig : IApplicationConfiguration
     {

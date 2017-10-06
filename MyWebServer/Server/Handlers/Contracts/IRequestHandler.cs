@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Handlers.Contracts
+﻿namespace MyWebServer.Server.Handlers.Contracts
 {
     using HTTP.Contracts;
 

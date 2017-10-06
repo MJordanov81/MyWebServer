@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.HTTP.Contracts
+﻿namespace MyWebServer.Server.HTTP.Contracts
 {
     using System.Collections.Generic;
     using Enums;

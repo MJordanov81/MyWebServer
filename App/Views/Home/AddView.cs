@@ -1,6 +1,6 @@
-﻿namespace ByTheCakeApplication.Views.Home
+﻿namespace App.Views.Home
 {
-    using WebServerApplication.Server.Contracts;
+    using MyWebServer.Server.Contracts;
 
     public class AddView : IView
     {

@@ -1,4 +1,4 @@
-﻿namespace HtmlUtilities.DataModels
+﻿namespace HtmlUtility.DataModels
 {
     using System.Collections.Generic;
 

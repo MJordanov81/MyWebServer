@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Handlers
+﻿namespace MyWebServer.Server.Handlers
 {
     using System.Collections.Generic;
     using System.Text.RegularExpressions;

@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.HTTP.Response
+﻿namespace MyWebServer.Server.HTTP.Response
 {
     using System.Text;
     using Contracts;

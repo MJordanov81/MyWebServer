@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.HTTP
+﻿namespace MyWebServer.Server.HTTP
 {
     using System;
     using System.Collections.Generic;

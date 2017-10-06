@@ -1,6 +1,6 @@
-﻿namespace ByTheCakeApplication.Config.Contracts
+﻿namespace App.Config.Contracts
 {
-    using WebServerApplication.Server.Routing.Contracts;
+    using MyWebServer.Server.Routing.Contracts;
 
     public interface IApplicationConfiguration
     {

@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Routing.Contracts
+﻿namespace MyWebServer.Server.Routing.Contracts
 {
     using System.Collections.Generic;
     using Enums;

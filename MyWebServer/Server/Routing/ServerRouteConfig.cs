@@ -1,4 +1,4 @@
-﻿namespace WebServerApplication.Server.Routing
+﻿namespace MyWebServer.Server.Routing
 {
     using System;
     using System.Collections.Concurrent;

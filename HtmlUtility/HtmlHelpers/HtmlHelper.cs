@@ -1,4 +1,4 @@
-﻿namespace HtmlUtilities.HtmlHelpers
+﻿namespace HtmlUtility.HtmlHelpers
 {
     using System.Collections.Generic;
     using System.Text;

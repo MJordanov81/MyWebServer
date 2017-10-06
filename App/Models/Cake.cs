@@ -1,4 +1,4 @@
-﻿namespace ByTheCakeApplication.Models
+﻿namespace App.Models
 {
     public class Cake
     {
