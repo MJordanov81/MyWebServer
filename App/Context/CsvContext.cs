@@ -1,12 +1,11 @@
 ﻿namespace ByTheCakeApplication.Context
 {
     using Contracts;
+    using Models;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using Models;
 
     public class CsvContext : IContext
     {

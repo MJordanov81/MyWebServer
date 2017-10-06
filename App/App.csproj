@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HtmlUtilities\HtmlUtilities.csproj" />
-    <ProjectReference Include="..\WebServerApplication\WebServerApplication.csproj" />
+    <ProjectReference Include="..\HtmlUtility\HtmlUtility.csproj" />
+    <ProjectReference Include="..\MyWebServer\MyWebServer.csproj" />
   </ItemGroup>
 
 </Project>
