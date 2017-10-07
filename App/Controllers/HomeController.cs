@@ -35,11 +35,11 @@
                 CsvContext context = new CsvContext();
                 context.Add(cake);
 
-                return new RedirectResponse("/", null);
+                return new RedirectResponse("/");
             }
             catch (Exception)
             {
-                return new RedirectResponse("/add", null);
+                return new RedirectResponse("/add");
             }
 
         }

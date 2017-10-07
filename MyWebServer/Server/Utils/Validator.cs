@@ -4,19 +4,19 @@
 
     public static class Validator
     {
-        public static void CheckIfNull(object obj)
+        public static void CheckIfNull(object obj, string name)
         {
             if (obj == null)
             {
-                throw new ArgumentNullException(nameof(obj));
+                throw new ArgumentNullException(name);
             }
         }
 
-        public static void CheckIfNullOrEmpty(object obj)
+        public static void CheckIfNullOrEmpty(object obj, string name)
         {
             if (obj as string == String.Empty || obj as string is null)
             {
-                throw new ArgumentNullException(nameof(obj), $"Object {nameof(obj)} cannot be null or empty!");
+                throw new ArgumentNullException(name, $"Object {name} cannot be null or empty!");
             }
         }
     }
