@@ -6,6 +6,7 @@
     using System.Threading.Tasks;
     using Routing;
     using Routing.Contracts;
+    using StaticData;
 
     public class WebServer
     {
@@ -20,7 +21,7 @@
         public WebServer(int port, IAppRouteConfig appRouteConfig)
         {
             this.port = port;
-            this.tcpListener = new TcpListener(IPAddress.Parse("127.0.01"), this.port);
+            this.tcpListener = new TcpListener(IPAddress.Parse(Constants.Ip), this.port);
             this.serverRouteConfig = new ServerRouteConfig(appRouteConfig);
         }
 
@@ -29,7 +30,7 @@
             this.tcpListener.Start();
             this.isRunning = true;
 
-            Console.WriteLine($"Server is now running and listening to TCP clients at IP 127.0.01 : {this.port}...");
+            Console.WriteLine(String.Format(Constants.ServerMessage, Constants.Ip, this.port));
 
             try
             {

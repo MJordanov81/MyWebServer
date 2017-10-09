@@ -16,7 +16,12 @@
     {
         public IHttpResponse Index()
         {
-            return new ViewResponse(ResponseStatusCode.Ok, new IndexView());
+            IHttpResponse response = new ViewResponse(ResponseStatusCode.Ok, new IndexView());
+
+            response.AddCookie("lang", "en");
+            response.AddCookie("sid", "151516dasda");
+
+            return response;
         }
 
         public IHttpResponse AddGet()

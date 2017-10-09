@@ -3,7 +3,7 @@
     using System;
     using HtmlUtility.DataModels;
     using HtmlUtility.HtmlHelpers;
-    using MyWebServer.Server.Contracts;
+    using MyWebServer.Server.Views.Contracts;
 
     public class SearchView : IView
     {

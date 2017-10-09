@@ -1,13 +1,14 @@
 ﻿namespace MyWebServer.Server.HTTP
 {
+    using System;
     using Utils;
 
     public class HttpHeader
     {
         public HttpHeader(string key, string value)
         {
-            Validator.CheckIfNullOrEmpty(key);
-            Validator.CheckIfNullOrEmpty(value);
+            Validator.CheckIfNullOrEmpty(key, nameof(key));
+            Validator.CheckIfNullOrEmpty(value, nameof(value));
 
             this.Key = key;
             this.Value = value;

@@ -1,6 +1,7 @@
 ﻿namespace MyWebServer.Server.Utils
 {
     using System;
+    using StaticData;
 
     public static class Validator
     {
@@ -16,7 +17,7 @@
         {
             if (obj as string == String.Empty || obj as string is null)
             {
-                throw new ArgumentNullException(name, $"Object {name} cannot be null or empty!");
+                throw new ArgumentNullException(String.Format(ExceptionConstants.ObjectCannotBeNullOrEmpty, name));
             }
         }
     }

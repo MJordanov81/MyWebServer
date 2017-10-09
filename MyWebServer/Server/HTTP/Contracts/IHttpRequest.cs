@@ -7,7 +7,11 @@
     {
         IDictionary<string, string> FormData { get; }
 
-        HttpHeaderCollection HeaderCollection { get; }
+        IHttpHeaderCollection HeaderCollection { get; }
+
+        IHttpCookieCollection CookieCollection { get; }
+
+        IHttpSession Session { get; }
 
         string Url { get; }
 

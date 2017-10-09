@@ -9,7 +9,7 @@
 
         public HttpContext(string requestString)
         {
-            Validator.CheckIfNullOrEmpty(requestString);
+            Validator.CheckIfNullOrEmpty(requestString, nameof(requestString));
 
             this.request = new HttpRequest(requestString);
         }

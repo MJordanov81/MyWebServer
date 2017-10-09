@@ -26,7 +26,7 @@
         {
             string request = await this.ReadRequest();
 
-            Validator.CheckIfNullOrEmpty(request);
+            Validator.CheckIfNullOrEmpty(request, nameof(request));
 
             IHttpContext httpContext = new HttpContext(request);
 

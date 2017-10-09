@@ -1,6 +1,6 @@
 ﻿namespace App.Views.Home
 {
-    using MyWebServer.Server.Contracts;
+    using MyWebServer.Server.Views.Contracts;
 
     public class AboutUsView : IView
     {

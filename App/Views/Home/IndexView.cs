@@ -1,6 +1,6 @@
 ﻿namespace App.Views.Home
 {
-    using MyWebServer.Server.Contracts;
+    using MyWebServer.Server.Views.Contracts;
     using Resources.images;
 
     public class IndexView : IView

@@ -1,8 +1,10 @@
 ﻿namespace MyWebServer.Server.Handlers
 {
-    using System;
     using Contracts;
+    using Enums;
     using HTTP.Contracts;
+    using StaticData;
+    using System;
     using Utils;
 
     public class RequestHandler : IRequestHandler
@@ -11,7 +13,7 @@
 
         public RequestHandler(Func<IHttpContext, IHttpResponse> func)
         {
-            Validator.CheckIfNull(func);
+            Validator.CheckIfNull(func, nameof(func));
 
             this.func = func;
         }
@@ -19,7 +21,14 @@
         public IHttpResponse Handle(IHttpContext httpContext)
         {
             IHttpResponse httpResponse = this.func(httpContext);
-            httpResponse.AddHeader("Content-type", "text/html");
+            httpResponse.AddHeader(HeaderType.Types[HeaderTypeCode.ContentType], MimeType.Types[MimeTypeCode.TextHtml]);
+
+            if (!httpContext.Request.CookieCollection.ContainsKey(Constants.SessionIdCookieKey))
+            {
+                string sessionId = SessionStore.GetNewSessionId();
+
+                httpResponse.AddCookie(Constants.SessionIdCookieKey, sessionId);
+            }
 
             return httpResponse;
         }

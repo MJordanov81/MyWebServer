@@ -10,12 +10,13 @@
     using Enums;
     using Handlers.Contracts;
     using Utils;
+    using StaticData;
 
     public class ServerRouteConfig : IServerRouteConfig
     {
         public ServerRouteConfig(IAppRouteConfig appRouteConfig)
         {
-            Validator.CheckIfNull(appRouteConfig);
+            Validator.CheckIfNull(appRouteConfig, nameof(appRouteConfig));
 
             this.Routes = new ConcurrentDictionary<RequestMethod, IDictionary<string, IRoutingContext>>();
 
@@ -31,7 +32,7 @@
 
         private void IzitializeServerConfig(IAppRouteConfig appRouteConfig)
         {
-            Validator.CheckIfNull(appRouteConfig);
+            Validator.CheckIfNull(appRouteConfig, nameof(appRouteConfig));
 
             foreach (KeyValuePair<RequestMethod, IDictionary<string, IRequestHandler>> kvp in appRouteConfig.Routes)
             {
@@ -50,8 +51,8 @@
 
         private string ParseRoute(string route, IList<string> parameters)
         {
-            Validator.CheckIfNullOrEmpty(route);
-            Validator.CheckIfNull(parameters);
+            Validator.CheckIfNullOrEmpty(route, nameof(route));
+            Validator.CheckIfNull(parameters, nameof(parameters));
 
             if (route == "/")
             {
@@ -73,9 +74,9 @@
 
         private void ParseTokens(IList<string> parameters, string[] tokens, StringBuilder parsedRegex)
         {
-            Validator.CheckIfNull(parameters);
-            Validator.CheckIfNull(tokens);
-            Validator.CheckIfNull(parsedRegex);
+            Validator.CheckIfNull(parameters, nameof(parameters));
+            Validator.CheckIfNull(tokens, nameof(tokens));
+            Validator.CheckIfNull(parsedRegex, nameof(parsedRegex));
 
             for (int i = 0; i < tokens.Length; i++)
             {
@@ -86,9 +87,9 @@
                     parsedRegex.Append($"{tokens[i]}{end}");
                 }
 
-                string paramPattern = @"<\w+>";
+                string paramNamePattern = Constants.ParamNameRegexPattern;
 
-                Regex regax = new Regex(paramPattern);
+                Regex regax = new Regex(paramNamePattern);
 
                 Match match = regax.Match(tokens[i]);
 

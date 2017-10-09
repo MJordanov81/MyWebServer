@@ -9,8 +9,8 @@
     {
         public RoutingContext(IRequestHandler requestHandler, IList<string> parameters)
         {
-            Validator.CheckIfNull(requestHandler);
-            Validator.CheckIfNull(parameters);
+            Validator.CheckIfNull(requestHandler, nameof(requestHandler));
+            Validator.CheckIfNull(parameters, nameof(parameters));
 
             this.RequestHandler = requestHandler;
             this.Parameters = parameters;

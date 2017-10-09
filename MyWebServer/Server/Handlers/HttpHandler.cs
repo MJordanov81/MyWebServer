@@ -1,12 +1,12 @@
 ﻿namespace MyWebServer.Server.Handlers
 {
-    using System.Collections.Generic;
-    using System.Text.RegularExpressions;
     using Contracts;
     using Enums;
     using HTTP.Contracts;
     using HTTP.Response;
     using Routing.Contracts;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
     using Utils;
     using Views;
 
@@ -16,7 +16,7 @@
 
         public HttpHandler(IServerRouteConfig serverRouteConfig)
         {
-            Validator.CheckIfNull(serverRouteConfig);
+            Validator.CheckIfNull(serverRouteConfig, nameof(serverRouteConfig));
 
             this.serverRouteConfig = serverRouteConfig;
         }

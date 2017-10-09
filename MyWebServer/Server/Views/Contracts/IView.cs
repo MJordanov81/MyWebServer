@@ -1,4 +1,4 @@
-﻿namespace MyWebServer.Server.Contracts
+﻿namespace MyWebServer.Server.Views.Contracts
 {
     public interface IView
     {

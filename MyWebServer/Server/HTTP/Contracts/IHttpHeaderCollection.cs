@@ -2,14 +2,14 @@
 {
     using System.Collections.Generic;
 
-    public interface IHttpHeaderCollection : IEnumerable<HttpHeader>
+    public interface IHttpHeaderCollection : IEnumerable<IList<HttpHeader>>
     {
-        IDictionary<string, HttpHeader> Headers { get; }
+        IDictionary<string, IList<HttpHeader>> Headers { get; }
 
         void AddHeader(HttpHeader header);
 
         bool ContainsKey(string key);
 
-        HttpHeader GetHeader(string key);
+        IList<HttpHeader> GetHeader(string key);
     }
 }

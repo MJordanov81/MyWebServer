@@ -1,6 +1,7 @@
 ﻿namespace MyWebServer.Server.Utils
 {
     using System;
+    using StaticData;
 
     public static class NumberParser
     {
@@ -29,7 +30,7 @@
                 }
                 catch (Exception)
                 {
-                    throw new ArgumentException("Invalid string");
+                    throw new ArgumentException(ExceptionConstants.InvalidString);
                 }
             }
 
@@ -78,7 +79,7 @@
             }
             catch (Exception)
             {
-                throw new ArgumentException("Invalid string");
+                throw new ArgumentException(ExceptionConstants.InvalidString);
             }
 
             return result;
