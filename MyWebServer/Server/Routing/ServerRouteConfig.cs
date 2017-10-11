@@ -1,16 +1,15 @@
 ﻿namespace MyWebServer.Server.Routing
 {
+    using Contracts;
+    using Enums;
+    using StaticData;
     using System;
     using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Text.RegularExpressions;
-    using Contracts;
-    using Enums;
-    using Handlers.Contracts;
     using Utils;
-    using StaticData;
 
     public class ServerRouteConfig : IServerRouteConfig
     {
@@ -30,19 +29,23 @@
 
         public IDictionary<RequestMethod, IDictionary<string, IRoutingContext>> Routes { get; private set; }
 
+        public string HomePage { get; private set; }
+
         private void IzitializeServerConfig(IAppRouteConfig appRouteConfig)
         {
             Validator.CheckIfNull(appRouteConfig, nameof(appRouteConfig));
 
-            foreach (KeyValuePair<RequestMethod, IDictionary<string, IRequestHandler>> kvp in appRouteConfig.Routes)
+            this.HomePage = appRouteConfig.HomePage;
+
+            foreach (KeyValuePair<RequestMethod, IDictionary<string, IAppRoutingContext>> kvp in appRouteConfig.Routes)
             {
-                foreach (KeyValuePair<string, IRequestHandler> requestHandler in kvp.Value)
+                foreach (KeyValuePair<string, IAppRoutingContext> appRoutingContext in kvp.Value)
                 {
                     IList<string> parameters = new List<string>();
 
-                    string parsedRegex = this.ParseRoute(requestHandler.Key, parameters);
+                    string parsedRegex = this.ParseRoute(appRoutingContext.Key, parameters);
 
-                    IRoutingContext routingContext = new RoutingContext(requestHandler.Value, parameters);
+                    IRoutingContext routingContext = new RoutingContext(appRoutingContext.Value.RequestHandler, appRoutingContext.Value.UserAuthenticationRequired, parameters);
 
                     this.Routes[kvp.Key].Add(parsedRegex, routingContext);
                 }

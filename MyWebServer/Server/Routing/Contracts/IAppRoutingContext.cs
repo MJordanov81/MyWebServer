@@ -1,12 +1,9 @@
 ﻿namespace MyWebServer.Server.Routing.Contracts
 {
-    using System.Collections.Generic;
     using Handlers.Contracts;
 
-    public interface IRoutingContext
+    public interface IAppRoutingContext
     {
-        IEnumerable<string> Parameters { get; }
-
         IRequestHandler RequestHandler { get; }
 
         bool UserAuthenticationRequired { get; }

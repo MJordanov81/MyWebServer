@@ -33,7 +33,7 @@
         public void Add(string key, object value)
         {
             Validator.CheckIfNullOrEmpty(key, nameof(key));
-            Validator.CheckIfNullOrEmpty(value, nameof(value));
+            Validator.CheckIfNull(value, nameof(value));
 
             this.Parameters[key] = value;
         }
@@ -42,7 +42,7 @@
         
         public bool IsAuthenticated()
         {
-            return false;
+            return this.Parameters.ContainsKey("CurrentUser");
         }
     }
 }

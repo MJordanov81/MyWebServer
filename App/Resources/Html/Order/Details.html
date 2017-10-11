@@ -1,0 +1,27 @@
+﻿<style>
+    footer {
+        text-align: center
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    .backButton {
+        margin-top: 30px;
+    }
+</style>
+
+<h2>Order {{{id}}}</h2>
+
+{{{products}}}
+
+<hr/>
+
+<div><strong>Total amount: {{{totalAmount}}}</strong></div>
+
+<br/>
+
+<div><em>Created on: {{{creationDate}}}</em></div>
+
+<div><button class=" backButton"><a href="/order/list">Back to Orders list</a></button></div>

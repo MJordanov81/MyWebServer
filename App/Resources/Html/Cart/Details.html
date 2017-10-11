@@ -1,0 +1,30 @@
+﻿<style>
+    footer {
+        text-align: center;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    .backButton {
+        margin-top: 30px;
+    }
+
+    .createOrder {
+        margin-top: 30px;
+    }
+</style>
+
+
+<h2>Cart</h2>
+{{{details}}}
+<hr>
+<div><strong>Total amount: {{{totalAmount}}}</strong></div>
+
+<form action="/order/create" method="post">
+    <input type="hidden" name="createOrder" value="createOrder" />
+    <input class="createOrder" type="submit" value="Create order"/>
+</form>
+
+<div><button class="backButton"><a href="/product/search">Back to Products</a></button></div>

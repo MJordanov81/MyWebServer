@@ -1,0 +1,29 @@
+﻿<style>
+    footer {
+        text-align: center
+    }
+
+    .backButton {
+        margin-top: 30px;
+    }
+</style>
+
+<h2>Add New Cake</h2>
+<form method="POST" action="/product/add">
+    <label for="name">Name: </label>
+    <input id="name" type="text" name="name" />
+
+    <label for="price">Price: </label>
+    <input id="price" type="number" step="0.01" min="0.00" name="price" />
+    
+    <label for="imageUrl">Image Url: </label>
+    <input id="imageUrl" type="text" name="imageUrl" />
+
+    <input type="submit" value="Submit" />
+</form>
+
+<div style="display: {{{showError}}}">
+    {{{error}}}
+</div>
+
+<div><button class="backButton"><a href="/">Back to Index</a></button></div>

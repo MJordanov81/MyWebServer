@@ -1,0 +1,36 @@
+﻿<style>
+    footer {
+        text-align: center
+    }
+
+</style>
+
+Already have an account? <button><a href="/login">Login</a></button>
+
+<h2>Register</h2>
+<form action="/register" method="post">
+    
+    <div>
+        <label for="username">Username: </label>
+        <input id="username" type="text" name="username" placeholder="Username"/>
+    </div>
+    
+    <div>
+        <label for="password">Password: </label>
+        <input id="password" type="password" name="password" placeholder="Password"/>
+    </div>
+    
+    <div>
+        <label for="confirmPassword">Confirm password: </label>
+        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm password"/>
+    </div>
+    
+    <div>
+        <input type="submit" value="Register"/>
+    </div>
+
+</form>
+
+<div style="display: {{{showError}}}">
+    {{{error}}}
+</div>

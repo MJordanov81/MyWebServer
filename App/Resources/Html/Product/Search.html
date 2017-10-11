@@ -1,0 +1,29 @@
+﻿
+<style>
+    footer {
+        text-align: center
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    .backButton {
+        margin-top: 30px;
+    }
+</style>
+
+<h2>Search Cake</h2>
+<form method="POST" action="/product/search">
+    <input type="text" name="query" />
+
+    <input type="submit" value="Search" />
+</form>
+
+<div style="display: {{{showCart}}}">
+    {{{productsCount}}} products in <a href="/cart/details">cart</a>
+</div>
+
+{{{searchResult}}}
+
+<div><button class="backButton"><a href="/">Back to Index</a></button></div>

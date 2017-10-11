@@ -23,6 +23,7 @@
             IHttpResponse httpResponse = this.func(httpContext);
             httpResponse.AddHeader(HeaderType.Types[HeaderTypeCode.ContentType], MimeType.Types[MimeTypeCode.TextHtml]);
 
+            // Adds session if client does not have one (checks request and adds to reponse)
             if (!httpContext.Request.CookieCollection.ContainsKey(Constants.SessionIdCookieKey))
             {
                 string sessionId = SessionStore.GetNewSessionId();

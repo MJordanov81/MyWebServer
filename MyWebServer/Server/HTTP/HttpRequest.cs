@@ -137,11 +137,11 @@
 
             query = query.Split(new[] { '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
 
-            string[] queryParameters = query.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] queryParameters = query.Split(new[] { '&' });
 
             foreach (string parameter in queryParameters)
             {
-                string[] parameterTokens = parameter.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] parameterTokens = parameter.Split(new[] { '=' });
 
                 if (parameterTokens.Length != 2)
                 {

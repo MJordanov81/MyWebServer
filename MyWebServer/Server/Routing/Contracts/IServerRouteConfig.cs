@@ -6,5 +6,7 @@
     public interface IServerRouteConfig
     {
         IDictionary<RequestMethod, IDictionary<string, IRoutingContext>> Routes { get; }
+
+        string HomePage { get; }
     }
 }

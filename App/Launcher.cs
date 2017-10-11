@@ -3,6 +3,7 @@
     using Config;
     using Config.Contracts;
     using Context;
+    using Microsoft.EntityFrameworkCore;
     using MyWebServer.Server;
     using MyWebServer.Server.Routing;
     using MyWebServer.Server.Routing.Contracts;
@@ -18,8 +19,10 @@
 
         public void Run()
         {
-            CsvContext context = new CsvContext();
-            context.InitializeDb(false);
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Database.Migrate();
+            }
 
             IApplicationConfiguration app = new AppConfig();
             IAppRouteConfig appRouteConfig = new AppRouteConfig();

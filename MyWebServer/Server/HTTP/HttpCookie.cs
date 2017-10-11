@@ -28,7 +28,7 @@
 
         public override string ToString()
         {
-            return $"{this.Key}: {this.Value}; Expires: {this.Expires.Date}";
+            return $"{this.Key}: {this.Value}; Expires={this.Expires.Date}; Domain=localhost:8230";
         }
     }
 }
